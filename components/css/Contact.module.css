@@ -1,0 +1,248 @@
+/* ============================================
+   SEÇÃO CONTATO
+   ============================================ */
+.contact {
+  background: var(--color-white);
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ============================================
+   INFORMAÇÕES DE CONTATO
+   ============================================ */
+.contactInfo {
+  animation: fadeInUp 0.8s ease;
+}
+
+.contactInfo h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.contactInfo > p {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-dark);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.infoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem;
+  background: var(--color-gray-light);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal);
+}
+
+.infoItem:hover {
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: transform var(--transition-normal);
+}
+
+.infoItem:hover .infoIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.infoIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.infoItem h4 {
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.infoItem p,
+.infoItem a {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.infoItem a {
+  transition: color var(--transition-fast);
+}
+
+.infoItem a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ============================================
+   FORMULÁRIO
+   ============================================ */
+.formContainer {
+  background: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.875rem 1.125rem;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  background: var(--color-gray-light);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  background: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(107, 163, 208, 0.1);
+}
+
+.formGroup input:disabled,
+.formGroup textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--color-gray-dark);
+  opacity: 0.6;
+}
+
+/* ============================================
+   BOTÃO DE ENVIO
+   ============================================ */
+.submitButton {
+  padding: 1rem 2rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   MENSAGEM DE SUCESSO
+   ============================================ */
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+  color: #16a34a;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  border-left: 4px solid #16a34a;
+  animation: slideInLeft 0.5s ease;
+}
+
+.successMessage svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 968px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .formContainer {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 2rem;
+  }
+  
+  .infoItem {
+    padding: 1.25rem;
+  }
+  
+  .infoItem:hover {
+    transform: none;
+  }
+}
