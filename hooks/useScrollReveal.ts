@@ -9,7 +9,7 @@ interface UseScrollRevealOptions {
 }
 
 export function useScrollReveal(
-  ref: RefObject<Element>,
+  ref: RefObject<Element | null>,
   options: UseScrollRevealOptions = {}
 ): boolean {
   const [isVisible, setIsVisible] = useState(false)
