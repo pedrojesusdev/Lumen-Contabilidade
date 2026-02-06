@@ -69,8 +69,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4>E-mail</h4>
-                  <a href="mailto:contato@lumencontabilidade.com.br">
-                    contato@lumencontabilidade.com.br
+                  <a href="mailto:diretoria@llcontabilidadese.com.br">
+                    diretoria@llcontabilidadese.com.br
                   </a>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4>Telefone</h4>
-                  <a href="tel:+551140041234">(11) 4004-1234</a>
+                  <a href="tel:+557932138359">(79) 3213-8359</a>
                 </div>
               </div>
               
@@ -97,8 +97,8 @@ export default function Contact() {
                 <div>
                   <h4>Endereço</h4>
                   <p>
-                    Av. Paulista, 1000 - Bela Vista<br />
-                    São Paulo - SP, 01310-100
+                    Rua Dom Bosco, 96 Cirurgia<br />
+                    Aracaju - SE, 49030-000
                   </p>
                 </div>
               </div>

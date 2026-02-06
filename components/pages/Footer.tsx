@@ -66,17 +66,17 @@ export default function Footer() {
             <h4>Contato</h4>
             <ul>
               <li>
-                <a href="mailto:contato@lumencontabilidade.com.br">
-                  contato@lumencontabilidade.com.br
+                <a href="mailto:diretoria@llcontabilidadese.com.br">
+                  diretoria@llcontabilidadese.com.br
                 </a>
               </li>
               <li>
-                <a href="tel:+551140041234">
-                  (11) 4004-1234
+                <a href="tel:+557932138359">
+                  (79) 3213-8359
                 </a>
               </li>
-              <li>Av. Paulista, 1000</li>
-              <li>São Paulo - SP</li>
+              <li>Rua Dom Bosco, 96 Cirurgia</li>
+              <li>Aracaju - SE</li>
             </ul>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Footer() {
             Todos os direitos reservados.
           </p>
           <p className={styles.credits}>
-            CNPJ: 00.000.000/0001-00 | CRC: SP-000000/O
+            CNPJ: 064.597.823/0001-29 | CRC: SP-000000/O
           </p>
         </div>
       </div>

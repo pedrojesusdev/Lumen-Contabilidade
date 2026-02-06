@@ -27,12 +27,11 @@ export default function Hero() {
 
   return (
     <section id="inicio" className={`${styles.hero} ${isLoaded ? styles.loaded : ''}`}>
-      {/* Grid de fundo animado */}
+      {/*Fundo Animado e moderno*/}
       <div className={styles.gridBackground}>
         <div className={styles.gridLines}></div>
       </div>
 
-      {/* Gradientes de fundo */}
       <div className={styles.gradientOrbs}>
         <div 
           className={styles.orb1}
@@ -53,15 +52,14 @@ export default function Hero() {
           }}
         ></div>
       </div>
-
+      
+      {/*Hero Section*/}
       <div className={`${styles.heroContent} container`}>
-        {/* Badge de destaque */}
         <div className={styles.badge}>
           <span className={styles.badgeDot}></span>
           <span>Excelência em Contabilidade Corporativa</span>
         </div>
 
-        {/* Título principal */}
         <h1 className={styles.heroTitle}>
           Transforme sua
           <span className={styles.titleHighlight}> gestão contábil</span>
@@ -69,13 +67,11 @@ export default function Hero() {
           em vantagem competitiva
         </h1>
 
-        {/* Subtítulo */}
         <p className={styles.heroSubtitle}>
           Soluções contábeis inteligentes e tecnológicas para empresas que 
           buscam crescimento sustentável, conformidade e resultados mensuráveis.
         </p>
 
-        {/* CTAs */}
         <div className={styles.heroActions}>
           <a href="#contato" className={styles.primaryBtn}>
             <span>Agende uma Consultoria</span>
@@ -91,8 +87,8 @@ export default function Hero() {
             <span>Nossos Serviços</span>
           </a>
         </div>
-
-        {/* Estatísticas */}
+        
+        {/*Estatísticas*/}
         <div className={styles.stats}>
           <div className={styles.statItem}>
             <div className={styles.statNumber}>15+</div>
@@ -110,7 +106,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Logos de clientes/certificações */}
         <div className={styles.trustBadges}>
           <p className={styles.trustText}>Confiado por empresas de todos os portes</p>
           <div className={styles.badges}>
@@ -121,7 +116,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className={styles.scrollIndicator}>
         <div className={styles.scrollMouse}>
           <div className={styles.scrollWheel}></div>

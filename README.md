@@ -28,18 +28,20 @@ lumen-contabilidade/
 │   ├── layout.tsx            # Layout principal
 │   └── page.tsx              # Página principal
 ├── components/
-│   ├── Header.tsx            # Navegação
-│   ├── Header.module.css
-│   ├── Hero.tsx              # Hero section
-│   ├── Hero.module.css
-│   ├── About.tsx             # Seção Sobre
-│   ├── About.module.css
-│   ├── Services.tsx          # Seção Serviços
-│   ├── Services.module.css
-│   ├── Contact.tsx           # Seção Contato
-│   ├── Contact.module.css
-│   ├── Footer.tsx            # Rodapé
-│   └── Footer.module.css
+|   └──css/
+│       ├── About.module.css
+│       ├── Contact.module.css
+│       └── Footer.module.css
+|    └──pages/
+│       ├── Header.module.css
+│       ├── Hero.module.css
+│       ├── Services.module.css
+│       ├── About.tsx             # Seção Sobre
+│       ├── Contact.tsx           # Seção Contato
+│       ├── Footer.tsx            # Rodapé
+│       ├── Header.tsx            # Navegação
+│       ├── Hero.tsx              # Hero section
+│       └── Services.tsx          # Seção Serviços
 ├── public/
 │   └── images/
 │       ├── logo.png          # Logo principal
@@ -170,76 +172,6 @@ npm run build
 npm start
 ```
 
-## 📝 Personalização
-
-### Alterar Cores
-
-Edite as variáveis CSS em `app/globals.css`:
-
-```css
-:root {
-  --color-primary: #SUA_COR;
-  --color-primary-dark: #SUA_COR;
-  /* ... */
-}
-```
-
-### Adicionar Novos Serviços
-
-Edite o array `services` em `components/Services.tsx`:
-
-```typescript
-const services = [
-  {
-    title: 'Novo Serviço',
-    description: 'Descrição do serviço',
-    icon: (/* SVG icon */)
-  }
-]
-```
-
-### Modificar Textos
-
-Todos os textos estão diretamente nos componentes para fácil edição.
-
-### Integrar Formulário
-
-Em `components/Contact.tsx`, substitua a simulação por sua API:
-
-```typescript
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  
-  // Sua lógica de envio aqui
-  await fetch('/api/contact', {
-    method: 'POST',
-    body: JSON.stringify(formData)
-  })
-}
-```
-
-## 🔧 Configuração Adicional
-
-### Google Fonts
-
-A fonte **Inter** já está configurada em `app/layout.tsx`.
-
-### Imagens
-
-Adicione imagens em `public/images/` e use o componente `next/image`.
-
-### SEO
-
-Configure metadata em `app/layout.tsx`:
-
-```typescript
-export const metadata: Metadata = {
-  title: 'Seu Título',
-  description: 'Sua Descrição',
-  // ...
-}
-```
-
 ## 📊 Performance
 
 - Lazy loading de imagens
@@ -255,4 +187,4 @@ Para dúvidas ou sugestões sobre o código, consulte a documentação do Next.j
 
 ---
 
-Desenvolvido com ❤️ para **Lúmen Contabilidade Enterprise**
+Desenvolvido para **Lúmen Contabilidade Enterprise**
