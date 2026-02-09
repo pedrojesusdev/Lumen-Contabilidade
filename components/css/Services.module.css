@@ -53,6 +53,35 @@
   margin-bottom: 5rem;
 }
 
+/* Wrapper para o botão 'Ver mais' */
+.showMoreWrapper {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.showMoreWrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.services.visible .showMoreWrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showMoreButton {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.showMoreButton:focus {
+  outline: none;
+}
+
 /* ============================================
    CARD DE SERVIÇO
    ============================================ */

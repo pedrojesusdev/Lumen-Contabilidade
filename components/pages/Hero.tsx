@@ -96,7 +96,7 @@ export default function Hero() {
           </div>
           <div className={styles.statDivider}></div>
           <div className={styles.statItem}>
-            <div className={styles.statNumber}>500+</div>
+            <div className={styles.statNumber}>55+</div>
             <div className={styles.statLabel}>Empresas Atendidas</div>
           </div>
           <div className={styles.statDivider}></div>

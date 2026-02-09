@@ -24,11 +24,10 @@ export default function About() {
         <div className={styles.aboutContent}>
           <div className={styles.aboutText}>
             <p className={styles.lead}>
-              A <strong>Lúmen Contabilidade Enterprise</strong> nasceu da visão de 
-              transformar a gestão contábil em uma ferramenta estratégica para o crescimento 
-              sustentável das empresas.
-            </p>
-            
+              A <strong>Lumen Contabilidade Enterprise</strong> nasce a partir de uma trajetória sólida construída pela LL Contabilidade, que atuou por mais de 15 anos no mercado, oferecendo serviços contábeis com ética, transparência e compromisso com resultados.</p>
+
+            <p>Após encerrar suas atividades, a LL Contabilidade dá lugar à Lumen — uma empresa que carrega toda essa experiência, agora ampliada para uma atuação estratégica em gestão empresarial, unindo contabilidade moderna, tecnologia e visão de crescimento para empresas que querem evoluir com segurança.</p>
+        
             <p>
               Com mais de 15 anos de experiência no mercado, combinamos conhecimento técnico 
               profundo, tecnologia de ponta e um atendimento personalizado que coloca as 
@@ -37,8 +36,7 @@ export default function About() {
             
             <p>
               Nossa equipe multidisciplinar de especialistas está preparada para oferecer 
-              soluções completas em contabilidade, planejamento tributário, consultoria 
-              empresarial e gestão financeira, sempre com foco em resultados mensuráveis 
+              soluções completas em contabilidade, planejamento tributário, escritório virtual, recuperação tributária, consultoria empresarial e gestão financeira, sempre com foco em resultados mensuráveis 
               e conformidade total com a legislação vigente.
             </p>
           </div>
@@ -101,11 +99,11 @@ export default function About() {
             <div className={styles.statLabel}>Anos de Mercado</div>
           </div>
           <div className={styles.stat}>
-            <div className={styles.statNumber}>500+</div>
+            <div className={styles.statNumber}>55+</div>
             <div className={styles.statLabel}>Empresas Atendidas</div>
           </div>
           <div className={styles.stat}>
-            <div className={styles.statNumber}>50+</div>
+            <div className={styles.statNumber}>6+</div>
             <div className={styles.statLabel}>Profissionais Especializados</div>
           </div>
           <div className={styles.stat}>

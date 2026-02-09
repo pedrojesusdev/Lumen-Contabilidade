@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import styles from '../css/Services.module.css'
 
@@ -14,7 +14,8 @@ export default function Services() {
       description: 'Gestão contábil completa com escrituração fiscal, apuração de impostos e demonstrações financeiras precisas.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+          <path d="M9 9h6M9 13h6M9 17h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       color: '#6BA3D0'
@@ -24,7 +25,8 @@ export default function Services() {
       description: 'Estratégias inteligentes para otimização da carga tributária dentro da legalidade.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor" strokeWidth="2"/>
+          <path d="M12 9l3-2-3-2M9 14l3 2 3-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
       color: '#4A8BBF'
@@ -34,17 +36,19 @@ export default function Services() {
       description: 'Terceirização completa de processos financeiros, incluindo contas a pagar/receber e fluxo de caixa.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+          <path d="M9 12h6M12 9v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
-      color: '#1E5A7D'
+      color: '#5B9FC6'
     },
     {
       title: 'Consultoria Empresarial',
       description: 'Análise estratégica e orientação para tomada de decisões que impulsionam o crescimento.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M4 6h3v10H4zM8.5 6h3v10h-3zM13 6h3v10h-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="4" y1="18" x2="16" y2="18" stroke="currentColor" strokeWidth="2"/>
         </svg>
       ),
       color: '#6BA3D0'
@@ -54,22 +58,109 @@ export default function Services() {
       description: 'Gestão completa de folha de pagamento, encargos trabalhistas e compliance trabalhista.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="2"/>
+          <path d="M5 18c0-2 2-3 7-3s7 1 7 3" stroke="currentColor" strokeWidth="2"/>
         </svg>
       ),
-      color: '#4A8BBF'
+      color: '#3D7BA3'
     },
     {
       title: 'Abertura de Empresas',
       description: 'Assessoria completa para constituição de empresas e escolha do regime tributário ideal.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="4" y="4" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+          <path d="M12 4v14M4 10h16" stroke="currentColor" strokeWidth="2"/>
+          <path d="M9 20h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       ),
       color: '#1E5A7D'
-    }
+    },
+    {
+      title: 'Acessoria trabalhista',
+      description: 'Assessoria é um serviço técnico juridico e contábil, que tem como objetivo orientar e auxiliar as empresas a cumprirem as obrigações trabalhistas, evitando passivos e garantindo conformidade com a legislação vigente.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="7" r="2.5" stroke="currentColor" strokeWidth="2"/>
+          <path d="M5 12h14a2 2 0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4a2 2 0 012-2z" stroke="currentColor" strokeWidth="2"/>
+          <path d="M8 16h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      ),
+      color: '#5B9FC6'
+    },
+    {
+      title: 'Recuperação Tributária',
+      description: 'Assessoria completa para recuperação de créditos tributários e regularização fiscal.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z" stroke="currentColor" strokeWidth="2"/>
+          <path d="M12 9v5M10 12h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M14 7l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      ),
+      color: '#4A8BBF'
+    },
+    {
+      title: 'Imposto de Renda',
+      description: 'Assessoria completa para cálculo e declaração de imposto de renda para pessoa física e jurídica.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="currentColor" strokeWidth="2"/>
+          <path d="M8 9h8M8 13h8M8 17h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      ),
+      color: '#6BA3D0'
+    },
+    {
+      title: 'Escritório Virtual',
+      description: 'Serviços de contabilidade, administração  online para empresas que buscam eficiência e praticidade, recebimento e encaminhamento de correspondencia.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+          <path d="M3 8h18M9 19h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="12" cy="11" r="2" stroke="currentColor" strokeWidth="1.5"/>
+        </svg>
+      ),
+      color: '#4A8BBF'
+    },
+    {
+      title: 'Criação de Sites',
+      description: 'Desenvolvimento de sites profissionais e modernos para empresas e empreendedores.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="5" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+          <path d="M3 8h18M9 19h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M8 12h1m2 0h1m2 0h1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      ),
+      color: '#1E5A7D'
+    },
+    {
+      title: 'E-social para pessoa física',
+      description: 'Assessoria completa para cumprimento das obrigações do e-social para pessoa física, garantindo conformidade e evitando penalidades com o máximo de confiança.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+          <path d="M9 10h6M9 14h6M9 18h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="12" cy="8" r="1" fill="currentColor"/>
+        </svg>
+      ),
+      color: '#3D7BA3'
+    },
   ]
+
+  const [visibleCount, setVisibleCount] = useState<number>(6)
+  const [expanded, setExpanded] = useState<boolean>(false)
+
+  const toggleShowMore = () => {
+    if (expanded) {
+      setVisibleCount(6)
+      setExpanded(false)
+    } else {
+      setVisibleCount(services.length)
+      setExpanded(true)
+    }
+  }
 
   return (
     <section 
@@ -85,7 +176,7 @@ export default function Services() {
         </div>
         
         <div className={styles.servicesGrid}>
-          {services.map((service, index) => (
+          {services.slice(0, visibleCount).map((service, index) => (
             <div 
               key={index} 
               className={styles.serviceCard}
@@ -110,6 +201,19 @@ export default function Services() {
           ))}
         </div>
         
+        <div className={styles.showMoreWrapper}>
+          <button
+            className={`${styles.ctaButton} ${styles.showMoreButton}`}
+            onClick={toggleShowMore}
+            aria-expanded={expanded}
+          >
+            <span>{expanded ? 'Ver menos' : 'Ver mais'}</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ marginLeft: 8 }}>
+              <path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
         {/* CTA */}
         <div className={styles.cta}>
           <div className={styles.ctaContent}>

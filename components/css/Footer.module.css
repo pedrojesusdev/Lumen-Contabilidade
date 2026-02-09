@@ -43,7 +43,6 @@
 
 .footerBrand img {
   height: auto;
-  max-height: 45px;
   width: auto;
   filter: brightness(1.2);
 }

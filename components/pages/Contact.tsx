@@ -69,8 +69,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4>E-mail</h4>
-                  <a href="mailto:diretoria@llcontabilidadese.com.br">
-                    diretoria@llcontabilidadese.com.br
+                  <a href="mailto:contato@lumencontabilidadese.com.br">
+                    contato@lumencontabilidadese.com.br
                   </a>
                 </div>
               </div>
@@ -84,6 +84,8 @@ export default function Contact() {
                 <div>
                   <h4>Telefone</h4>
                   <a href="tel:+557932138359">(79) 3213-8359</a>
+                  <h4>Celular</h4>
+                  <a href="tel:+557932138359">(79) 9 8128-7055</a>
                 </div>
               </div>
               
@@ -112,8 +114,7 @@ export default function Contact() {
                 <div>
                   <h4>Horário</h4>
                   <p>
-                    Segunda a Sexta: 8h às 18h<br />
-                    Sábado: 8h às 12h
+                    Segunda a Sexta: 8h às 18h
                   </p>
                 </div>
               </div>
@@ -121,6 +122,7 @@ export default function Contact() {
           </div>
           
           {/* Formulário */}
+          {/*Integrar o envio de dados para o email da empresa*/}
           <div className={styles.formContainer}>
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>

@@ -12,7 +12,7 @@ export default function Footer() {
               src="/images/logo-blue.png" 
               alt="Lúmen Contabilidade Enterprise" 
               width={180} 
-              height={45}
+              height={60}
             />
             <p>
               Transformando a gestão contábil em estratégia 
@@ -66,8 +66,8 @@ export default function Footer() {
             <h4>Contato</h4>
             <ul>
               <li>
-                <a href="mailto:diretoria@llcontabilidadese.com.br">
-                  diretoria@llcontabilidadese.com.br
+                <a href="mailto:contato@lumencontabilidadese.com.br">
+                  contato@lumencontabilidadese.com.br
                 </a>
               </li>
               <li>
