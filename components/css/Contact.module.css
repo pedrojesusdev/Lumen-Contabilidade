@@ -347,6 +347,29 @@
 }
 
 /* ============================================
+   MENSAGEM DE ERRO
+   ============================================ */
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.125rem 1.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: #F87171;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border-radius: 12px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  animation: slideInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.errorMessage svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ============================================
    RESPONSIVIDADE
    ============================================ */
 @media (max-width: 968px) {

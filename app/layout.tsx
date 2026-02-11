@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     title: 'Lúmen Contabilidade Enterprise',
     description: 'Soluções contábeis completas para empresas',
     type: 'website',
+    images: ['../public/Marca_Lumen_perfil_fundo_azul-removebg-preview.png'],
   },
 }
 

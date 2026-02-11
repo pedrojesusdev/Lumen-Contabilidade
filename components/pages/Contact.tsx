@@ -17,19 +17,41 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('sending')
-    
-    // Simular envio
-    setTimeout(() => {
+  e.preventDefault()
+  setStatus('sending')
+  
+  try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+
+    const data = await response.json()
+
+    if (response.ok) {
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
       
       setTimeout(() => {
         setStatus('idle')
       }, 5000)
-    }, 1500)
+    } else {
+      setStatus('error')
+      setTimeout(() => {
+        setStatus('idle')
+      }, 5000)
+    }
+  } catch (error) {
+    console.error('Erro:', error)
+    setStatus('error')
+    setTimeout(() => {
+      setStatus('idle')
+    }, 5000)
   }
+}
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -186,6 +208,14 @@ export default function Contact() {
                   <span>Mensagem enviada com sucesso! Entraremos em contato em breve.</span>
                 </div>
               )}
+              {status === 'error' && (
+              <div className={styles.errorMessage}>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              <span>Erro ao enviar mensagem. Tente novamente ou entre em contato por email.</span>
+            </div>
+          )}
             </form>
           </div>
         </div>

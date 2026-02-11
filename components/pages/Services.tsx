@@ -13,67 +13,71 @@ export default function Services() {
       title: 'Contabilidade Empresarial',
       description: 'Gestão contábil completa com escrituração fiscal, apuração de impostos e demonstrações financeiras precisas.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-          <path d="M9 9h6M9 13h6M9 17h3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      ),
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 8h.01M9 12h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
       color: '#6BA3D0'
     },
     {
       title: 'Planejamento Tributário',
       description: 'Estratégias inteligentes para otimização da carga tributária dentro da legalidade.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 5h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor" strokeWidth="2"/>
-          <path d="M12 9l3-2-3-2M9 14l3 2 3-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke="currentColor" strokeWidth="2"/>
+        <path d="M16 3v4M8 3v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
       color: '#4A8BBF'
     },
     {
       title: 'BPO Financeiro',
       description: 'Terceirização completa de processos financeiros, incluindo contas a pagar/receber e fluxo de caixa.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
-          <path d="M9 12h6M12 9v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      ),
-      color: '#5B9FC6'
-    },
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M9 2h6M12 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
+    color: '#1E5A7D'
+  },
     {
       title: 'Consultoria Empresarial',
       description: 'Análise estratégica e orientação para tomada de decisões que impulsionam o crescimento.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6h3v10H4zM8.5 6h3v10h-3zM13 6h3v10h-3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          <line x1="4" y1="18" x2="16" y2="18" stroke="currentColor" strokeWidth="2"/>
-        </svg>
-      ),
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10 10l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+      </svg>
+    ),
       color: '#6BA3D0'
     },
     {
       title: 'Departamento Pessoal',
       description: 'Gestão completa de folha de pagamento, encargos trabalhistas e compliance trabalhista.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="2"/>
-          <path d="M5 18c0-2 2-3 7-3s7 1 7 3" stroke="currentColor" strokeWidth="2"/>
-        </svg>
-      ),
-      color: '#3D7BA3'
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
+        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+      color: '#4A8BBF'
     },
     {
       title: 'Abertura de Empresas',
       description: 'Assessoria completa para constituição de empresas e escolha do regime tributário ideal.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-          <path d="M12 4v14M4 10h16" stroke="currentColor" strokeWidth="2"/>
-          <path d="M9 20h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      ),
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="12" cy="7" r="1" fill="currentColor"/>
+      </svg>
+    ),
       color: '#1E5A7D'
     },
     {
