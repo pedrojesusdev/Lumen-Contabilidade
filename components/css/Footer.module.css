@@ -159,6 +159,24 @@
   opacity: 0.7;
 }
 
+.developerCredit {
+  font-size: 0.875rem !important;
+  color: rgba(107, 163, 208, 0.7) !important;
+  margin-top: 0.5rem;
+}
+
+.developerCredit a {
+  color: #6BA3D0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(107, 163, 208, 0.3);
+}
+
+.developerCredit a:hover {
+  color: #8BBDE0;
+  border-bottom-color: #6BA3D0;
+}
+
 /* ============================================
    RESPONSIVIDADE
    ============================================ */

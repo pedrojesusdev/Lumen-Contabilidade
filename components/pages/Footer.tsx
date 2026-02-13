@@ -90,6 +90,9 @@ export default function Footer() {
           <p className={styles.credits}>
             CNPJ: 064.597.823/0001-29 | CRC: SP-000000/O
           </p>
+          <p className={styles.developerCredit}>
+            Desenvolvido por Pedro Jesus | Contato: (79) 9976-6161 | Instagram: <a href="https://instagram.com/pedro.jesus_" target="_blank" rel="noopener noreferrer">@pedro.jesus_</a>
+          </p>
         </div>
       </div>
     </footer>

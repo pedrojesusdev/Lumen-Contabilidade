@@ -26,10 +26,12 @@ export async function POST(request: NextRequest) {
     if (!apiKey) {
       console.error('RESEND_API_KEY não configurada')
       return NextResponse.json(
-        { error: 'Erro de configuração do servidor' },
+        { error: 'Erro de configuração do servidor - API key não encontrada' },
         { status: 500 }
       )
     }
+
+    console.log('Enviando email para Resend...', { name, email, to: 'pa04052007@gmail.com' })
 
     // Enviar email usando Resend API
     const response = await fetch('https://api.resend.com/emails', {
@@ -60,15 +62,27 @@ export async function POST(request: NextRequest) {
       }),
     })
 
-    const responseData = await response.json()
+    let responseData
+    try {
+      responseData = await response.json()
+    } catch (e) {
+      const text = await response.text()
+      console.error('Resposta Resend não é JSON:', text)
+      responseData = { error: text }
+    }
 
     if (!response.ok) {
-      console.error('Resend error:', responseData)
+      console.error('Resend error:', response.status, responseData)
       return NextResponse.json(
-        { error: 'Falha ao enviar email' },
+        { 
+          error: 'Falha ao enviar email',
+          details: responseData?.message || responseData?.error || 'Erro desconhecido'
+        },
         { status: response.status || 502 }
       )
     }
+
+    console.log('Email enviado com sucesso:', responseData)
 
     return NextResponse.json(
       { success: true, message: 'Email enviado com sucesso!' },
@@ -77,7 +91,10 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Erro ao enviar email:', error)
     return NextResponse.json(
-      { error: 'Erro ao enviar email. Tente novamente.' },
+      { 
+        error: 'Erro ao enviar email. Tente novamente.',
+        details: error instanceof Error ? error.message : 'Erro desconhecido'
+      },
       { status: 500 }
     )
   }
