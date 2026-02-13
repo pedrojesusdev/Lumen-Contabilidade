@@ -13,9 +13,6 @@ export const metadata: Metadata = {
   description: 'Soluções contábeis completas para empresas. Consultoria especializada, planejamento tributário e gestão financeira com excelência e tecnologia.',
   keywords: 'contabilidade, consultoria empresarial, planejamento tributário, gestão contábil, BPO financeiro',
   authors: [{ name: 'Lúmen Contabilidade Enterprise' }],
-  icons: {
-    icon: '/images/Marca_Lumen_perfil_fundo_azul-removebg-preview.png',
-  },
   openGraph: {
     title: 'Lúmen Contabilidade Enterprise',
     description: 'Soluções contábeis completas para empresas',
