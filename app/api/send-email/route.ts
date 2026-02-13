@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log('Enviando email para Resend...', { name, email, to: 'pa04052007@gmail.com' })
+    console.log('Enviando email para Resend...', { name, email, to: 'contato@lumencontabilidadese.com.br' })
 
     // Enviar email usando Resend API
     const response = await fetch('https://api.resend.com/emails', {
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify({
         from: 'onboarding@resend.dev',
-        to: 'pa04052007@gmail.com',
+        to: 'contato@lumencontabilidadese.com.br',
         reply_to: email,
         subject: `Novo contato de ${name} - Lúmen Contabilidade`,
         html: `
