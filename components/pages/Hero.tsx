@@ -115,13 +115,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <div className={styles.scrollIndicator}>
-        <div className={styles.scrollMouse}>
-          <div className={styles.scrollWheel}></div>
-        </div>
-        <span>Scroll para explorar</span>
-      </div>
     </section>
   )
 }
