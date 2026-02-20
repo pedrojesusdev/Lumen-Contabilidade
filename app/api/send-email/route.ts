@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json()
+    const body = await request.json()
+    const { name, email, message } = body
 
-    // Validação básica
+    // =============================
+    // Validação
+    // =============================
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Todos os campos são obrigatórios' },
@@ -12,7 +18,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       return NextResponse.json(
@@ -21,80 +26,43 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Verificar se a API key está configurada
-    const apiKey = process.env.RESEND_API_KEY
-    if (!apiKey) {
-      console.error('RESEND_API_KEY não configurada')
+    // =============================
+    // Envio de email
+    // =============================
+    const { data, error } = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'contato@lumencontabilidadese.com.br',
+      replyTo: email,
+      subject: `Novo contato de ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px;">
+          <h2>Novo contato recebido</h2>
+          <p><strong>Nome:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Mensagem:</strong></p>
+          <p style="white-space: pre-wrap;">${message}</p>
+        </div>
+      `,
+    })
+
+    if (error) {
+      console.error('Resend error:', error)
       return NextResponse.json(
-        { error: 'Erro de configuração do servidor - API key não encontrada' },
+        { error: 'Falha ao enviar email', details: error.message },
         { status: 500 }
       )
     }
 
-    console.log('Enviando email para Resend...', { name, email, to: 'contato@lumencontabilidadese.com.br' })
-
-    // Enviar email usando Resend API
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        from: 'onboarding@resend.dev',
-        to: 'contato@lumencontabilidadese.com.br',
-        reply_to: email,
-        subject: `Novo contato de ${name} - Lúmen Contabilidade`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #333;">Novo Contato Recebido</h2>
-            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px;">
-              <p><strong>Nome:</strong> ${name}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Mensagem:</strong></p>
-              <p style="white-space: pre-wrap; word-break: break-word;">${message}</p>
-            </div>
-            <p style="color: #999; font-size: 12px; margin-top: 20px;">
-              Enviado via Lúmen Contabilidade
-            </p>
-          </div>
-        `,
-      }),
-    })
-
-    let responseData
-    try {
-      responseData = await response.json()
-    } catch (e) {
-      const text = await response.text()
-      console.error('Resposta Resend não é JSON:', text)
-      responseData = { error: text }
-    }
-
-    if (!response.ok) {
-      console.error('Resend error:', response.status, responseData)
-      return NextResponse.json(
-        { 
-          error: 'Falha ao enviar email',
-          details: responseData?.message || responseData?.error || 'Erro desconhecido'
-        },
-        { status: response.status || 502 }
-      )
-    }
-
-    console.log('Email enviado com sucesso:', responseData)
-
     return NextResponse.json(
-      { success: true, message: 'Email enviado com sucesso!' },
+      { success: true, id: data?.id },
       { status: 200 }
     )
-  } catch (error) {
-    console.error('Erro ao enviar email:', error)
+
+  } catch (err) {
+    console.error('Erro interno:', err)
+
     return NextResponse.json(
-      { 
-        error: 'Erro ao enviar email. Tente novamente.',
-        details: error instanceof Error ? error.message : 'Erro desconhecido'
-      },
+      { error: 'Erro interno do servidor' },
       { status: 500 }
     )
   }
