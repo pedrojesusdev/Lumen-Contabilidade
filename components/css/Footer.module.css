@@ -43,7 +43,8 @@
 
 .footerBrand img {
   height: auto;
-  width: auto;
+  width: 180px; /* base logo width */
+  max-width: 100%; /* make image fluid */
   filter: brightness(1.2);
 }
 
@@ -220,5 +221,35 @@
   
   .footerLinks a:hover {
     transform: none;
+  }
+}
+
+/* smaller phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md) 0 var(--spacing-xs);
+  }
+
+  .footerGrid {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .socialLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footerLinks ul {
+    gap: 0.5rem;
+  }
+
+  .footerLinks a,
+  .footerLinks li {
+    font-size: 0.875rem;
+  }
+
+  .footerBottom p {
+    font-size: 0.75rem;
   }
 }
