@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     // Envio de email
     // =============================
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'contato@lumencontabilidadese.com.br',
       to: 'contato@lumencontabilidadese.com.br',
       replyTo: email,
       subject: `Novo contato de ${name}`,
